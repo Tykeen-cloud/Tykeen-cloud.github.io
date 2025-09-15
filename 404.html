@@ -374,26 +374,24 @@
 <!-- 额外的追加注入项 -->
 
 <script src="/js/candy.min.js"></script>
-<audio id="bg-music" src="/audio/Saber-1080p.mp3" loop></audio>
-<button id="play-button">播放音乐</button>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<div id="aplayer"></div>
 <script>
-  document.getElementById('play-button').addEventListener('click', function() 
-{
-    var music = document.getElementById('bg-music'
-);
-    if
- (music.paused) {
-      music.play();
-      this.textContent = '暂停音乐'
-;
-    } 
-else
- {
-      music.pause();
-      this.textContent = '播放音乐'
-;
-    }
-  });
+    const ap = new
+ APlayer({
+        container: document.getElementById('aplayer'
+),
+        audio
+: [{
+            name: '1080p'
+,
+            artist: 'Saber'
+,
+            url: '/audio/Saber-1080p.mp3', // 你的音乐文件路径
+            cover: '/image/1080p.jpg' // 封面图片
+        }]
+    });
 </script>
         <script>
     if (!window.kr) {

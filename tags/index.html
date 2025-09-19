@@ -454,27 +454,27 @@
 
 
 <script src="/js/candy.min.js"></script>
-<div id="aplayer-fixed" class="aplayer" data-id="2696005576" data-server="netease" data-type="playlist" data-fixed="true" data-lrc-type="1"></div>
-
-  <div id="player"></div>
-  <script>
-    const ap = new
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<div id="aplayer"></div>
+<script>
+    const homeAp = new
  APlayer({
-      container: document.getElementById('player'
+        container: document.getElementById('aplayer'
 ),
-      fixed: true, // 固定在底部
-      audio
+        audio
 : [{
-        name: '歌曲名称'
+            name: '1080p'
 ,
-        artist: '歌手'
+            artist: 'Saber'
 ,
-        url: '/audio/Saber-1080p.mp3', // 音乐文件路径
-        cover: '/images/1080p.jpg', // 封面图片路径 (可选)
-        lrc: '/audio/Saber-1080p.lrc'  // 歌词文件路径
-      }]
+            url: '/audio/Saber-1080p.mp3', // 你的音乐文件路径
+            cover: '/images/1080p.jpg', // 封面图片
+            lrc: '/audio/Saber-1080p.lrc' // 歌词文件路径
+        }]
     });
-  </script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script>
 

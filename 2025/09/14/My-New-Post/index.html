@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="Tykeen的个人博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-09-14T15:38:07.000Z">
-<meta property="article:modified_time" content="2025-09-19T11:51:20.611Z">
+<meta property="article:modified_time" content="2025-09-20T15:18:35.134Z">
 <meta property="article:author" content="Tykeen">
 <meta property="article:tag" content="Hexo,学习经验，生活感悟">
 <meta name="twitter:card" content="summary">
@@ -245,7 +245,7 @@
                     
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-09-19T11:51:20.611Z" itemprop="dateModified">最后编辑：2025-09-19</time>
+                    <time datetime="2025-09-20T15:18:35.134Z" itemprop="dateModified">最后编辑：2025-09-20</time>
                 </div>
             </div>
         </footer>
@@ -272,6 +272,18 @@
 <div id="hello-aplayer"></div>
 <script>
   // 检查当前文章是否包含 'music' 字段
+  
+    const ap = new APlayer({
+      container: document.getElementById('hello-aplayer'), // 绑定到刚才的容器
+      autoplay: false, // 是否自动播放，建议设置为 false
+      audio: [{
+        name: 'Butterflies', // 音乐名称
+        artist: 'Asen艾志恒', // 歌手名
+        url: '/audio/Asen - Butterflies.mp3', // 这里动态获取文章 Front-matter 中的 music 字段
+        cover: '/images/Asen.jpg', // 封面图片路径
+        
+      }]
+    });
   
 </script>
 
